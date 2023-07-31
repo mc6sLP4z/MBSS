@@ -1,0 +1,315 @@
+[15:59:35] [ServerMain/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[15:59:35] [Yggdrasil Key Fetcher/ERROR]: Failed to request yggdrasil public key
+com.mojang.authlib.exceptions.AuthenticationUnavailableException: Cannot contact authentication server
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:119) ~[authlib-4.0.43.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:91) ~[authlib-4.0.43.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilServicesKeyInfo.fetch(YggdrasilServicesKeyInfo.java:94) ~[authlib-4.0.43.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilServicesKeyInfo.lambda$get$1(YggdrasilServicesKeyInfo.java:81) ~[authlib-4.0.43.jar:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[?:?]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[?:?]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+Caused by: java.net.UnknownHostException: api.minecraftservices.com
+	at sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567) ~[?:?]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[?:?]
+	at java.net.Socket.connect(Socket.java:633) ~[?:?]
+	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:304) ~[?:?]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:178) ~[?:?]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:532) ~[?:?]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:637) ~[?:?]
+	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:266) ~[?:?]
+	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:380) ~[?:?]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:193) ~[?:?]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1287) ~[?:?]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128) ~[?:?]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:179) ~[?:?]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1665) ~[?:?]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589) ~[?:?]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:224) ~[?:?]
+	at com.mojang.authlib.HttpAuthenticationService.performGetRequest(HttpAuthenticationService.java:140) ~[authlib-4.0.43.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:96) ~[authlib-4.0.43.jar:?]
+	... 9 more
+[15:59:40] [ServerMain/INFO]: Loaded 7 recipes
+[15:59:41] [Server thread/INFO]: Starting minecraft server version 1.20.1
+[15:59:41] [Server thread/INFO]: Loading properties
+[15:59:41] [Server thread/INFO]: This server is running Paper version git-Paper-82 (MC: 1.20.1) (Implementing API version 1.20.1-R0.1-SNAPSHOT) (Git: b533905)
+[15:59:42] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[15:59:42] [Server thread/INFO]: Using 4 threads for Netty based IO
+[15:59:42] [Server thread/WARN]: [!] The timings profiler has been enabled but has been scheduled for removal from Paper in the future.
+    We recommend installing the spark profiler as a replacement: https://spark.lucko.me/
+    For more information please visit: https://github.com/PaperMC/Paper/issues/8948
+[15:59:42] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using 1 I/O threads, 2 worker threads, and gen parallelism of 2 threads
+[15:59:43] [Server thread/INFO]: Default game type: SURVIVAL
+[15:59:43] [Server thread/INFO]: Generating keypair
+[15:59:43] [Server thread/INFO]: Starting Minecraft server on 0.0.0.0:50433
+[15:59:43] [Server thread/INFO]: Using default channel type
+[15:59:43] [Server thread/INFO]: Paper: Using Java compression from Velocity.
+[15:59:43] [Server thread/INFO]: Paper: Using Java cipher from Velocity.
+[15:59:45] [Server thread/INFO]: [SkinsRestorer] Loading server plugin SkinsRestorer v14.2.12
+[15:59:45] [Server thread/INFO]: [MOTD] Loading server plugin MOTD v1.0
+[15:59:45] [Server thread/INFO]: [Geyser-Spigot] Loading server plugin Geyser-Spigot v2.1.2-SNAPSHOT
+[15:59:47] [Server thread/ERROR]: [Geyser-Spigot] 无法读取/创建 config.yml文件! 请确保文件已经更新同时有读取和写入权限!
+org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.JsonMappingException: java.io.CharConversionException: Invalid UTF-8 start byte 0xa1 (at char #1046, byte #1023)
+ at [Source: (File); line: 19, column: 27] (through reference chain: org.geysermc.geyser.platform.spigot.GeyserSpigotConfiguration["bedrock"])
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:402) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:361) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.deser.BeanDeserializerBase.wrapAndThrow(BeanDeserializerBase.java:1826) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:316) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4730) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3542) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.util.FileUtils.loadConfig(FileUtils.java:57) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.GeyserSpigotPlugin.onLoad(GeyserSpigotPlugin.java:144) ~[Geyser-Spigot.jar:?]
+	at io.papermc.paper.plugin.storage.ServerPluginProviderStorage.processProvided(ServerPluginProviderStorage.java:59) ~[paper-1.20.1.jar:git-Paper-82]
+	at io.papermc.paper.plugin.storage.ServerPluginProviderStorage.processProvided(ServerPluginProviderStorage.java:18) ~[paper-1.20.1.jar:git-Paper-82]
+	at io.papermc.paper.plugin.storage.SimpleProviderStorage.enter(SimpleProviderStorage.java:40) ~[paper-1.20.1.jar:git-Paper-82]
+	at io.papermc.paper.plugin.entrypoint.LaunchEntryPointHandler.enter(LaunchEntryPointHandler.java:36) ~[paper-1.20.1.jar:git-Paper-82]
+	at org.bukkit.craftbukkit.v1_20_R1.CraftServer.loadPlugins(CraftServer.java:507) ~[paper-1.20.1.jar:git-Paper-82]
+	at net.minecraft.server.dedicated.DedicatedServer.initServer(DedicatedServer.java:273) ~[paper-1.20.1.jar:git-Paper-82]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1101) ~[paper-1.20.1.jar:git-Paper-82]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:318) ~[paper-1.20.1.jar:git-Paper-82]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+Caused by: org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.dataformat.yaml.JacksonYAMLParseException: java.io.CharConversionException: Invalid UTF-8 start byte 0xa1 (at char #1046, byte #1023)
+ at [Source: (File); line: 19, column: 27]
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.dataformat.yaml.YAMLParser.nextToken(YAMLParser.java:425) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.core.JsonParser.nextFieldName(JsonParser.java:1065) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:321) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.deser.impl.FieldProperty.deserializeAndSet(FieldProperty.java:138) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:314) ~[Geyser-Spigot.jar:?]
+	... 15 more
+Caused by: org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.error.YAMLException: java.io.CharConversionException: Invalid UTF-8 start byte 0xa1 (at char #1046, byte #1023)
+	at org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.reader.StreamReader.update(StreamReader.java:211) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.reader.StreamReader.ensureEnoughData(StreamReader.java:169) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.reader.StreamReader.peek(StreamReader.java:129) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.scanner.ScannerImpl.scanComment(ScannerImpl.java:1295) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.scanner.ScannerImpl.scanToNextToken(ScannerImpl.java:1264) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:345) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:263) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:662) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:185) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.parser.ParserImpl.getEvent(ParserImpl.java:195) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.dataformat.yaml.YAMLParser.nextToken(YAMLParser.java:419) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.core.JsonParser.nextFieldName(JsonParser.java:1065) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:321) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.deser.impl.FieldProperty.deserializeAndSet(FieldProperty.java:138) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:314) ~[Geyser-Spigot.jar:?]
+	... 15 more
+Caused by: java.io.CharConversionException: Invalid UTF-8 start byte 0xa1 (at char #1046, byte #1023)
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.dataformat.yaml.UTF8Reader.reportInvalidInitial(UTF8Reader.java:398) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.dataformat.yaml.UTF8Reader.read(UTF8Reader.java:251) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.reader.StreamReader.update(StreamReader.java:176) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.reader.StreamReader.ensureEnoughData(StreamReader.java:169) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.reader.StreamReader.peek(StreamReader.java:129) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.scanner.ScannerImpl.scanComment(ScannerImpl.java:1295) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.scanner.ScannerImpl.scanToNextToken(ScannerImpl.java:1264) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:345) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:263) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:662) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:185) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.parser.ParserImpl.getEvent(ParserImpl.java:195) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.dataformat.yaml.YAMLParser.nextToken(YAMLParser.java:419) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.core.JsonParser.nextFieldName(JsonParser.java:1065) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:321) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.deser.impl.FieldProperty.deserializeAndSet(FieldProperty.java:138) ~[Geyser-Spigot.jar:?]
+	at org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:314) ~[Geyser-Spigot.jar:?]
+	... 15 more
+[15:59:47] [Server thread/WARN]: org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.JsonMappingException: java.io.CharConversionException: Invalid UTF-8 start byte 0xa1 (at char #1046, byte #1023)
+[15:59:47] [Server thread/WARN]:  at [Source: (File); line: 19, column: 27] (through reference chain: org.geysermc.geyser.platform.spigot.GeyserSpigotConfiguration["bedrock"])
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:402)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:361)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.deser.BeanDeserializerBase.wrapAndThrow(BeanDeserializerBase.java:1826)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:316)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4730)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3542)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.util.FileUtils.loadConfig(FileUtils.java:57)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.GeyserSpigotPlugin.onLoad(GeyserSpigotPlugin.java:144)
+[15:59:47] [Server thread/WARN]: 	at io.papermc.paper.plugin.storage.ServerPluginProviderStorage.processProvided(ServerPluginProviderStorage.java:59)
+[15:59:47] [Server thread/WARN]: 	at io.papermc.paper.plugin.storage.ServerPluginProviderStorage.processProvided(ServerPluginProviderStorage.java:18)
+[15:59:47] [Server thread/WARN]: 	at io.papermc.paper.plugin.storage.SimpleProviderStorage.enter(SimpleProviderStorage.java:40)
+[15:59:47] [Server thread/WARN]: 	at io.papermc.paper.plugin.entrypoint.LaunchEntryPointHandler.enter(LaunchEntryPointHandler.java:36)
+[15:59:47] [Server thread/WARN]: 	at org.bukkit.craftbukkit.v1_20_R1.CraftServer.loadPlugins(CraftServer.java:507)
+[15:59:47] [Server thread/WARN]: 	at net.minecraft.server.dedicated.DedicatedServer.e(DedicatedServer.java:273)
+[15:59:47] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.w(MinecraftServer.java:1101)
+[15:59:47] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:318)
+[15:59:47] [Server thread/WARN]: 	at java.base/java.lang.Thread.run(Thread.java:833)
+[15:59:47] [Server thread/WARN]: Caused by: org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.dataformat.yaml.JacksonYAMLParseException: java.io.CharConversionException: Invalid UTF-8 start byte 0xa1 (at char #1046, byte #1023)
+[15:59:47] [Server thread/WARN]:  at [Source: (File); line: 19, column: 27]
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.dataformat.yaml.YAMLParser.nextToken(YAMLParser.java:425)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.core.JsonParser.nextFieldName(JsonParser.java:1065)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:321)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.deser.impl.FieldProperty.deserializeAndSet(FieldProperty.java:138)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:314)
+[15:59:47] [Server thread/WARN]: 	... 15 more
+[15:59:47] [Server thread/WARN]: Caused by: org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.error.YAMLException: java.io.CharConversionException: Invalid UTF-8 start byte 0xa1 (at char #1046, byte #1023)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.reader.StreamReader.update(StreamReader.java:211)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.reader.StreamReader.ensureEnoughData(StreamReader.java:169)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.reader.StreamReader.peek(StreamReader.java:129)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.scanner.ScannerImpl.scanComment(ScannerImpl.java:1295)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.scanner.ScannerImpl.scanToNextToken(ScannerImpl.java:1264)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:345)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:263)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:662)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:185)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.parser.ParserImpl.getEvent(ParserImpl.java:195)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.dataformat.yaml.YAMLParser.nextToken(YAMLParser.java:419)
+[15:59:47] [Server thread/WARN]: 	... 20 more
+[15:59:47] [Server thread/WARN]: Caused by: java.io.CharConversionException: Invalid UTF-8 start byte 0xa1 (at char #1046, byte #1023)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.dataformat.yaml.UTF8Reader.reportInvalidInitial(UTF8Reader.java:398)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.com.fasterxml.jackson.dataformat.yaml.UTF8Reader.read(UTF8Reader.java:251)
+[15:59:47] [Server thread/WARN]: 	at Geyser-Spigot.jar//org.geysermc.geyser.platform.spigot.shaded.org.yaml.snakeyaml.reader.StreamReader.update(StreamReader.java:176)
+[15:59:47] [Server thread/WARN]: 	... 30 more
+[15:59:47] [Server thread/INFO]: [CatSeedLogin] Loading server plugin CatSeedLogin v1.3.10-SNAPSHOT
+[15:59:47] [Server thread/INFO]: [AdvancedBan] Loading server plugin AdvancedBan v2.3.0
+[15:59:47] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[15:59:47] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[15:59:47] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[15:59:47] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[15:59:47] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[15:59:47] [Server thread/INFO]: Preparing level "world"
+[15:59:48] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[15:59:49] [Server thread/INFO]: Time elapsed: 850 ms
+[15:59:49] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
+[15:59:50] [Server thread/INFO]: Time elapsed: 223 ms
+[15:59:50] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
+[15:59:50] [Server thread/INFO]: Time elapsed: 146 ms
+[15:59:50] [Server thread/INFO]: [SkinsRestorer] Enabling SkinsRestorer v14.2.12
+[15:59:52] [Server thread/INFO]: [SkinsRestorer] Detected Minecraft v1_20_R1, using MappingSpigotSkinRefresher.
+[15:59:53] [Server thread/INFO]: [SkinsRestorer] [ACF] Enabled Asynchronous Tab Completion Support!
+[15:59:53] [Server thread/INFO]: [SkinsRestorer] Using paper join listener!
+[15:59:53] [Server thread/INFO]: [MOTD] Enabling MOTD v1.0
+[15:59:53] [Server thread/INFO]: [Geyser-Spigot] Enabling Geyser-Spigot v2.1.2-SNAPSHOT
+[15:59:53] [Server thread/INFO]: [Geyser-Spigot] Disabling Geyser-Spigot v2.1.2-SNAPSHOT
+[15:59:53] [Server thread/INFO]: [CatSeedLogin] Enabling CatSeedLogin v1.3.10-SNAPSHOT
+[15:59:53] [Server thread/WARN]: [CatSeedLogin] 服务器没有装载ProtocolLib插件，这将无法使用登录前隐藏背包
+[15:59:53] [Server thread/INFO]: [AdvancedBan] Enabling AdvancedBan v2.3.0
+[15:59:54] [Server thread/INFO]: [me.leoko.advancedban.shaded.com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[15:59:55] [Server thread/INFO]: [hsqldb.db.HSQLDB7E660BFE4E.ENGINE] checkpointClose start
+[15:59:55] [Server thread/INFO]: [hsqldb.db.HSQLDB7E660BFE4E.ENGINE] checkpointClose synched
+[15:59:55] [Server thread/INFO]: [hsqldb.db.HSQLDB7E660BFE4E.ENGINE] checkpointClose script done
+[15:59:55] [Server thread/INFO]: [hsqldb.db.HSQLDB7E660BFE4E.ENGINE] checkpointClose end
+[15:59:55] [Server thread/INFO]: [me.leoko.advancedban.shaded.com.zaxxer.hikari.pool.PoolBase] HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+[15:59:55] [Server thread/INFO]: [me.leoko.advancedban.shaded.com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[15:59:55] [Server thread/INFO]: 
+ 
+[]=====[Enabling AdvancedBan]=====[]
+| Information:
+|   Name: AdvancedBan
+|   Developer: Leoko
+|   Version: 2.3.0
+|   Storage: HSQLDB (local)
+| Support:
+|   Github: https://github.com/DevLeoko/AdvancedBan/issues
+|   Discord: https://discord.gg/ycDG6rS
+| Twitter: @LeokoGar
+| Update:
+|   Failed to check for updates :(
+[]================================[]
+ 
+[15:59:55] [Server thread/INFO]: Running delayed init tasks
+[15:59:55] [Server thread/INFO]: Done (14.000s)! For help, type "help"
+[15:59:55] [Server thread/INFO]: Timings Reset
+[15:59:55] [Craft Scheduler Thread - 3 - SkinsRestorer/WARN]: [SkinsRestorer] Failed to get release info from api.github.com. 
+ If this message is repeated a lot, please see http://skinsrestorer.net/firewall
+[15:59:55] [Craft Scheduler Thread - 0 - CatSeedLogin/INFO]: [CatSeedLogin] 缓存加载 2 个数据
+[15:59:55] [Craft Scheduler Thread - 1 - SkinsRestorer/INFO]: [SkinsRestorer] [Critical] ------------------[SkinsRestorer is OFFLINE] -------------------------
+[15:59:55] [Craft Scheduler Thread - 1 - SkinsRestorer/INFO]: [SkinsRestorer] [Critical] Plugin currently can't fetch new skins due to blocked connection!
+[15:59:55] [Craft Scheduler Thread - 1 - SkinsRestorer/INFO]: [SkinsRestorer] [Critical] See https://skinsrestorer.net/firewall for steps to resolve your issue!
+[15:59:55] [Craft Scheduler Thread - 1 - SkinsRestorer/INFO]: [SkinsRestorer] [Critical] ----------------------------------------------------------------------
+[16:01:56] [User Authenticator #0/INFO]: UUID of player mc6sLP4z is ea55e250-6711-3d19-b18b-b5295301381c
+[16:01:57] [Server thread/INFO]: mc6sLP4z joined the game
+[16:01:57] [Server thread/INFO]: mc6sLP4z[/127.0.0.1:58015] logged in with entity id 313 at ([world]0.0, 72.0, 48.0)
+[16:01:57] [Craft Scheduler Thread - 6 - CatSeedLogin/INFO]: [CatSeedLogin] 缓存加载 2 个数据
+[16:02:12] [Server thread/INFO]: mc6sLP4z issued server command: /l hrz1234567
+[16:02:12] [Craft Scheduler Thread - 8 - CatSeedLogin/INFO]: [CatSeedLogin] 缓存加载 2 个数据
+[16:02:14] [Server thread/INFO]: mc6sLP4z issued server command: /gamemode spectator
+[16:02:14] [Server thread/INFO]: [mc6sLP4z: Set own game mode to Spectator Mode]
+[16:02:58] [Server thread/INFO]: mc6sLP4z issued server command: /gamemode survival
+[16:02:58] [Server thread/INFO]: [mc6sLP4z: Set own game mode to Survival Mode]
+[16:03:11] [Server thread/INFO]: mc6sLP4z issued server command: /gamemode spectator
+[16:03:11] [Server thread/INFO]: [mc6sLP4z: Set own game mode to Spectator Mode]
+[16:03:19] [Server thread/INFO]: mc6sLP4z issued server command: /gamemode survival
+[16:03:19] [Server thread/INFO]: [mc6sLP4z: Set own game mode to Survival Mode]
+[16:03:37] [Server thread/INFO]: mc6sLP4z issued server command: /gamemode spectator
+[16:03:37] [Server thread/INFO]: [mc6sLP4z: Set own game mode to Spectator Mode]
+[16:03:49] [Server thread/INFO]: mc6sLP4z issued server command: /gamemode survival
+[16:03:49] [Server thread/INFO]: [mc6sLP4z: Set own game mode to Survival Mode]
+[16:04:00] [Server thread/INFO]: mc6sLP4z issued server command: /gamemode spectator
+[16:04:00] [Server thread/INFO]: [mc6sLP4z: Set own game mode to Spectator Mode]
+[16:04:05] [Server thread/INFO]: mc6sLP4z issued server command: /gamemode survival
+[16:04:05] [Server thread/INFO]: [mc6sLP4z: Set own game mode to Survival Mode]
+[16:04:19] [Server thread/INFO]: mc6sLP4z issued server command: /gamemode spectator
+[16:04:19] [Server thread/INFO]: [mc6sLP4z: Set own game mode to Spectator Mode]
+[16:04:49] [Server thread/INFO]: mc6sLP4z issued server command: /gamemode survival
+[16:04:49] [Server thread/INFO]: [mc6sLP4z: Set own game mode to Survival Mode]
+[16:04:54] [Server thread/INFO]: mc6sLP4z issued server command: /gamemode spectator
+[16:04:54] [Server thread/INFO]: [mc6sLP4z: Set own game mode to Spectator Mode]
+[16:05:03] [Server thread/INFO]: mc6sLP4z issued server command: /gamemode survival
+[16:05:03] [Server thread/INFO]: [mc6sLP4z: Set own game mode to Survival Mode]
+[16:05:13] [Server thread/INFO]: mc6sLP4z issued server command: /gamemode spectator
+[16:05:13] [Server thread/INFO]: [mc6sLP4z: Set own game mode to Spectator Mode]
+[16:05:48] [Server thread/INFO]: mc6sLP4z issued server command: /gamemode survival
+[16:05:48] [Server thread/INFO]: [mc6sLP4z: Set own game mode to Survival Mode]
+[16:10:19] [Server thread/INFO]: mc6sLP4z issued server command: /gamemode spectator
+[16:10:19] [Server thread/INFO]: [mc6sLP4z: Set own game mode to Spectator Mode]
+[16:10:28] [Server thread/INFO]: mc6sLP4z issued server command: /gamemode survival
+[16:10:28] [Server thread/INFO]: [mc6sLP4z: Set own game mode to Survival Mode]
+[16:10:29] [Server thread/INFO]: mc6sLP4z lost connection: Disconnected
+[16:10:29] [Server thread/INFO]: mc6sLP4z left the game
+[16:20:25] [Craft Scheduler Thread - 28 - SkinsRestorer/WARN]: [SkinsRestorer] Failed to get release info from api.github.com. 
+ If this message is repeated a lot, please see http://skinsrestorer.net/firewall
+[16:27:48] [Server thread/INFO]: Stopping the server
+[16:27:48] [Server thread/INFO]: Stopping server
+[16:27:48] [Server thread/INFO]: [AdvancedBan] Disabling AdvancedBan v2.3.0
+[16:27:48] [Server thread/INFO]: [hsqldb.db.HSQLDB7E660BFE4E.ENGINE] Database closed
+[16:27:48] [Server thread/INFO]: [me.leoko.advancedban.shaded.com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[16:27:48] [Server thread/INFO]: [me.leoko.advancedban.shaded.com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[16:27:48] [Server thread/INFO]: 
+ 
+[]=====[Disabling AdvancedBan]=====[]
+| Information:
+|   Name: AdvancedBan
+|   Developer: Leoko
+|   Version: 2.3.0
+|   Storage: HSQLDB (local)
+| Support:
+|   Github: https://github.com/DevLeoko/AdvancedBan/issues
+|   Discord: https://discord.gg/ycDG6rS
+| Twitter: @LeokoGar
+[]================================[]
+ 
+[16:27:48] [Server thread/INFO]: [CatSeedLogin] Disabling CatSeedLogin v1.3.10-SNAPSHOT
+[16:27:48] [Server thread/INFO]: [MOTD] Disabling MOTD v1.0
+[16:27:48] [Server thread/INFO]: [SkinsRestorer] Disabling SkinsRestorer v14.2.12
+[16:27:48] [Server thread/INFO]: Saving players
+[16:27:48] [Server thread/INFO]: Saving worlds
+[16:27:48] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[16:27:48] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world'
+[16:27:48] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world'
+[16:27:48] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world'
+[16:27:48] [Server thread/INFO]: [ChunkHolderManager] Saved 491 block chunks, 237 entity chunks, 1 poi chunks in world 'world' in 0.34s
+[16:27:48] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[16:27:48] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_nether]'/minecraft:the_nether
+[16:27:48] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_nether'
+[16:27:48] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_nether'
+[16:27:48] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_nether'
+[16:27:48] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 23 entity chunks, 0 poi chunks in world 'world_nether' in 0.01s
+[16:27:48] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[16:27:48] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_the_end]'/minecraft:the_end
+[16:27:48] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_the_end'
+[16:27:48] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_the_end'
+[16:27:48] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_the_end'
+[16:27:48] [Server thread/INFO]: [ChunkHolderManager] Saved 10 block chunks, 10 entity chunks, 0 poi chunks in world 'world_the_end' in 0.01s
+[16:27:48] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[16:27:48] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[16:27:48] [Server thread/INFO]: Flushing Chunk IO
+[16:27:48] [Server thread/INFO]: Closing Thread Pool
+[16:27:48] [Server thread/INFO]: Closing Server
